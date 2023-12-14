@@ -559,3 +559,80 @@
     * bottom：使元素的底部与其所在行的底部对齐
 * 总结
   * `vertical-align`不能控制块元素
+
+
+
+# 6. 列表相关的属性
+
+* **简介**
+
+  列表相关属性可以用在`ul`,`ol` ,`li`
+
+* **总结**
+
+  |       属性名        |       功能       |                            属性值                            |
+  | :-----------------: | :--------------: | :----------------------------------------------------------: |
+  |  list-style-sytle   |   设置列表符号   | 常用值如下: ① none: 不显示前面的表示; ② square: 实心方块; ③ disc: 圆形; ④ decimal: 数字; ⑤ lower-roman: 小写罗马字母; ⑥ upper-roman: 大写罗马字母; ⑦ lower-alpha: 小写字母; ⑧ upper-alpha: 大写字母 |
+  | list-style-position | 设置列表符号位置 |         ① inside: 在li的里面; ② outside: 在li的外边          |
+  |  list-style-image   |  自定义列表符号  |                        url(图片地址)                         |
+  |     list-style      |     符号属性     |                      没有数量, 顺序要求                      |
+
+* **示例**
+
+  ```css
+  ul {
+      /*列表符号*/
+      /*list-style-type: none;*/
+      /*list-style-type: square;*/
+  
+      /* 列表符号的位置*/
+      /*list-style-position: inside;*/
+      /*list-style-position: outside;*/
+  
+      list-style: square outside;
+  }
+  ```
+
+  
+
+# 7. 表格相关属性
+
+## 7.1. 边框相关属性
+
+* 总结
+
+  以下4个边框相关的属性, 其他元素可以用, 例如`span`, `h1`
+
+  |    属性名    |     功能     |                            属性值                            |
+  | :----------: | :----------: | :----------------------------------------------------------: |
+  | border-width |   边框宽度   |                      CSS中可用的长度值                       |
+  | border-color |   边款颜色   |                      CSS中可用的颜色值                       |
+  | border-style |   边框风格   | ① 默认值； ② solid：实线； ③ dashed： 虚线； ④ dotted：点线；⑤ double双实线 |
+  |    border    | 边框复合属性 |                     没有数量和顺序的要求                     |
+
+* 示例
+
+  ```css
+  <style>
+      table {
+          /*整体加上边框*/
+          /*border-color: black;*/
+          /*border-style: dashed;*/
+          /*border-width: 2px;*/
+          border: 2px green solid;
+      }
+  
+      td, th {
+          border: 2px green dashed;
+      }
+  
+      span {
+          border: 2px green dashed;
+      }
+      h1 {
+          border: 2px green dashed;
+      }
+  </style>
+  ```
+
+  
