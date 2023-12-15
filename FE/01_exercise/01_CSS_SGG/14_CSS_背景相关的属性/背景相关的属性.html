@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>背景相关的属性</title>
+        <style>
+            div {
+                width: 500px;
+                height: 1000px;
+                border: 2px black solid;
+                font-size: 40px;
+                /*设置背景颜色 默认值是transparent（透明，即使用浏览器的背景）*/
+                background-color: skyblue;
+                /*设置背景图片*/
+                background-image: url("美丽的天空.jpg");
+                /*设置背景图片的重复方式*/
+                background-repeat: no-repeat;
+                /*控制背景图片的位置*/
+                background-position: left top; /*使用关键词*/
+                background-position: 70px 120px; /*使用具体的像素值*/
+                /*复合属性*/
+                backgroud: skyblue url("美丽的天空.jpg") no-repeat 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div> hello!</div>
+    </body>
+</html>

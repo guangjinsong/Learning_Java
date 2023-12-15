@@ -597,7 +597,7 @@
 
 # 7. 表格相关属性
 
-## 7.1. 边框相关属性
+## 7.1. 边框相关属性（其他元素也能用）
 
 * 总结
 
@@ -633,6 +633,136 @@
           border: 2px green dashed;
       }
   </style>
+  ```
+
+  
+
+## 7.2. 表格独有属性（只有table标签才可以使用）
+
+* **简介**
+
+  |     属性名      |         功能         |                            属性值                            |
+  | :-------------: | :------------------: | :----------------------------------------------------------: |
+  |  table-layout   |      设置列宽度      | ① auto：自动，列宽根据内容计算（默认值）；② fixed：固定列宽，平均分 |
+  | border-spacing  |      单元格间距      |        CSS中可用的长度值，生效的前提是单元格不能合并         |
+  | border-collapse |    合并单元格边框    |             ① collapse：合并；② separate：不合并             |
+  |   empty-cells   | 隐藏没有内容的单元格 | ① show：显示（默认）；② hide：隐藏，生效前提：单元格不能合并 |
+  |  caption-side   |  设置表格标题的位置  |            ① 上面（默认值）；② bottom：在表格下面            |
+
+* **示例**
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>02_表格独有属性</title>
+      <style>
+          table {
+              border: 2px green solid;
+              width: 500px;
+              /* 控制表格的列宽 */
+              table-layout: fixed;
+              /* 控制单元格之间的间距（生效的前提，不合并单元格的边框）*/
+              border-spacing: 2px;
+              /*合并相邻单元格的边框*/
+              border-collapse: collapse;
+              /*隐藏没有内容的单元格（生效的前提，不合并单元格的边框）*/
+              empty-cells: hide;
+              /*设置表格标题的位置*/
+              caption-side: bottom;
+          }
+          td, th {
+              border: 2px orange solid;
+          }
+      </style>
+  </head>
+  <body>
+      <table>
+          <caption>人员信息</caption>
+          <thead>
+          <tr>
+              <th>序号</th>
+              <th>姓名</th>
+              <th>性别</th>
+              <th>年龄</th>
+              <th>政治面貌</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>1</td>
+              <td>张三</td>
+              <td>男</td>
+              <td>18</td>
+              <td>团员</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td></td>
+              <td>男</td>
+              <td>19</td>
+              <td>党员</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td>王五</td>
+              <td>男</td>
+              <td>19</td>
+              <td>积极分子</td>
+          </tr>
+          </tbody>
+      </table>
+  </body>
+  </html>
+  ```
+
+
+
+# 8. 背景相关属性
+
+* **简介**
+
+  |       属性名        |       功能       |                            属性值                            |
+  | :-----------------: | :--------------: | :----------------------------------------------------------: |
+  |  background-color   |   设置背景颜色   |       符合CSS中颜色规范的值。默认背景颜色是transparent       |
+  |  background-image   |   设置背景图片   |                       url(图片的地址)                        |
+  |  background-repeat  | 设置背景重复方式 | ① repeat：重复，铺满整个元素，默认值； ② repeat-x：只在水平方向重复； ③ repeat-y：只在垂直方向重复；④no-repeat：不重复 |
+  | background-position | 设置背景图片位置 | ![image-20231215145610394](https://dawn1314.oss-cn-beijing.aliyuncs.com/typoraimg/202312151456451.png) |
+  |     background      |     复合属性     |                      没有数量和顺序要求                      |
+
+* **示例**
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>背景相关的属性</title>
+          <style>
+              div {
+                  width: 500px;
+                  height: 1000px;
+                  border: 2px black solid;
+                  font-size: 40px;
+                  /*设置背景颜色 默认值是transparent（透明，即使用浏览器的背景）*/
+                  background-color: skyblue;
+                  /*设置背景图片*/
+                  background-image: url("美丽的天空.jpg");
+                  /*设置背景图片的重复方式*/
+                  background-repeat: no-repeat;
+                  /*控制背景图片的位置*/
+                  background-position: left top; /*使用关键词*/
+                  background-position: 70px 120px; /*使用具体的像素值*/
+                  /*复合属性*/
+                  backgroud: skyblue url("美丽的天空.jpg") no-repeat 300px;
+              }
+          </style>
+      </head>
+      <body>
+          <div> hello!</div>
+      </body>
+  </html>
   ```
 
   
