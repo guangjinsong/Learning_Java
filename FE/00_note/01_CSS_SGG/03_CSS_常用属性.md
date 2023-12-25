@@ -766,3 +766,40 @@
   ```
 
   
+
+# 9. 鼠标相关属性
+
+* **简介**
+
+  | 属性名 |        功能        |                            属性值                            |
+  | :----: | :----------------: | :----------------------------------------------------------: |
+  | cursor | 设置鼠标光标的样式 | ① pointer: 小手; ② move: 移动图标; ③ text: 文字选择器; ④ crossshair: 十字架; ⑤ help: 帮助; ⑥ wait: 等待 |
+
+* **示例**
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>鼠标相关属性</title>
+          <style>
+              div {
+                  width: 400px;
+                  height: 400px;
+                  background-color: skyblue;
+                  cursor: wait; /* 鼠标属性 */
+              }
+          </style>
+      </head>
+      <body>
+          <div>
+              把鼠标放进来看一看
+              <input type="text">
+              <a href="#">百度</a>
+          </div>
+      </body>
+  </html>
+  ```
+
+  

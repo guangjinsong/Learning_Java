@@ -1,0 +1,80 @@
+# 1. 常见长度单位
+
+* **简介**
+
+  * `px`：像素
+  * `em`：相对元素, `font-size`的倍数
+
+  * `rem`：相对根字体大小，`html`标签就是根
+
+  * `%`：相对父元素计算
+
+* **总结**
+  * CSS中设置长度，必须加单位，否则样式无效！
+
+* **示例**
+
+  ```html
+  	<!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>01_CSS中常用的长度单位</title>
+          <style>
+              html {
+                  font-size: 100px;
+              }
+              #d1 {
+                  /* 第一种长度单位: px */
+                  width: 200px;
+                  height: 200px;
+                  font-size: 50px;
+                  background: skyblue;
+              }
+  
+              #d2 {
+                  /* 第二种长度单位: em(相对于当前元素的font-size的倍数)*/
+                  width: 10em;
+                  height: 10em;
+                  font-size: 50px;
+                  background: skyblue;
+              }
+  
+              #d3 {
+                  /* 第三种长度单位: rem(相对于根元素(html标签)的font-size的倍数)*/
+                  width: 10rem;
+                  height: 10rem;
+                  font-size: 50px;
+                  background: skyblue;
+              }
+  
+              #d4 {
+                  width: 200px;
+                  height: 200px;
+                  font-size: 50px;
+                  background: skyblue;
+              }
+              .inside {
+                  /* 第四种长度单位: %(相对于其父元素的百分比)*/
+                  width: 50%;
+                  height: 200%;
+                  font-size: 50px;
+                  background: skyblue;
+              }
+          </style>
+      </head>
+      <body>
+          <div id="d1">111</div>
+          <hr>
+          <div id="d2">222</div>
+          <hr>
+          <div id="d3">333</div>
+          <hr>
+          <div id="d4">
+              <div class="inside">444</div>
+          </div>
+      </body>
+  </html>
+  ```
+
+  

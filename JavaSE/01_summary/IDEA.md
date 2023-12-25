@@ -328,3 +328,16 @@
 
 > 1. [IDEA 中新建 Empty project（空白项目）](https://blog.csdn.net/zxl2029/article/details/113775919)
 
+
+
+# 前端
+
+## idea中HTML格式化时标签缩进问题
+
+* **简介**
+
+  在IntelliJ Idea中HTML格式化时，默认`<head>` `<body>`标签都不会缩进
+
+* **解决**
+
+  ![image-20231215131726780](https://dawn1314.oss-cn-beijing.aliyuncs.com/typoraimg/202312151317859.png)
